@@ -4,7 +4,13 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: "Montserrat", sans-serif;
-        font-weight: bold
+        font-weight: bold;
+
+        color: ${({ theme }) => theme.colors.text}
+    }
+
+    a {
+        text-decoration: none;
     }
 `
 

@@ -34,18 +34,15 @@ const NavLink = styled.a`
 `;
 
 const NavButton = styled.a<NavButtonProps>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 9rem;
-    height: 2.8rem;
+    display: inline;
+    padding: ${({ border }) => border ?  '1rem 1.45rem' : '1.2rem 1.65rem'};
     border-radius: 5rem;
-    border: ${({ border }) => border ? "0.2rem solid #FFF" : "0.2rem solid transparent"};
     background: ${({ background, theme }) =>
         background
             ? `linear-gradient(to right, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`
-            : ""
+            : 'transparent'
     };
+    border: ${({ border }) => border ? "0.2rem solid #FFF" : ""};    
     color: ${({ theme }) => theme.colors.text}
 `
 
