@@ -19,6 +19,5 @@ export default function NavBar() {
             <NavButton border href='#'>Contact us</NavButton>
             <NavButton background href='#'>Join Hydra</NavButton>
         </NavMenu>
-
     </NavContainer>
 }

@@ -14,8 +14,8 @@ const NavContainer = styled.nav`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 10rem;
+    width: 80%;
+    margin-bottom: 12rem;
 `;
 
 const MainLogo = styled.img`

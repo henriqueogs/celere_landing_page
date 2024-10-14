@@ -7,6 +7,11 @@ interface MainContainerProps {
 const MainContainer = styled.div<MainContainerProps>`
   // altura passada por parâmetro
   height: ${({ height }) => height || 'auto'};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 `;
 
 export default MainContainer;
