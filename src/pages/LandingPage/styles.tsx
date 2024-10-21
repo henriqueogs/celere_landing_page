@@ -6,6 +6,7 @@ interface ContainerProps {
     height?: string
     width?: string
     direction?: string
+    align?: string
 }
 
 interface ParagraphContainerProps {
@@ -20,7 +21,8 @@ const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: ${({ direction }) => direction};
     justify-content: space-between;
-    height: ${({ height }) => height};
+    align-items: ${({ align }) => align ?? ''};
+    height: ${({ height }) => height ?? '15rem'};
     width: ${({ width }) => width ?? '70vw'};
     margin-bottom: 8rem;
 `
@@ -39,6 +41,13 @@ const ParagraphContainer = styled.div<ParagraphContainerProps>`
 const StyledIcon = styled(Icon) <StyledIconProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-size: 4rem;
+
+    transition: color 0.2s ease-in-out, margin-right 0.2s ease-in-out;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.text};
+        margin-right: -2rem;
+    }
 `
 
 export { Container, HeadingContainer, ParagraphContainer, StyledIcon }

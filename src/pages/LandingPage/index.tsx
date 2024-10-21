@@ -2,30 +2,35 @@ import ColoredHeading from "../../components/ColoredHeading"
 import MainContainer from "../../components/MainContainer"
 import NavBar from "../../components/NavBar"
 import WebirdImage from "../../assets/webird_1.jpg"
+import WebirdImageLarge from "../../assets/webird_2.jpg"
+import ComplexityIcon from "../../assets/complexity_icon.png"
+import ArrowLargeRight from "../../assets/arrow_large_right.svg"
 import { NavButton } from "../../components/NavBar/styles.tsx"
 import { Container, HeadingContainer, ParagraphContainer, StyledIcon } from "./styles.tsx"
 import PictureRectangle from "../../components/PictureRectangle/index.tsx"
 import { Heading } from "../../components/ColoredHeading/styles.tsx"
+import { RectangleContainerLarge, RectanglePicture } from "../../components/PictureRectangle/styles.tsx"
 
 export default function LandingPage() {
-    return <MainContainer height="100rem">
+    return <MainContainer height="120rem">
         <NavBar />
         {/* Área inicial (primeiro "bloco") */}
         <Container height="30rem">
             <Container height="30rem" direction="column">
                 <HeadingContainer>
-                    <ColoredHeading gradient>Dive</ColoredHeading>
-                    <ColoredHeading> Into The Depths Of</ColoredHeading>
-                    <ColoredHeading gradient> Virtual Reality</ColoredHeading>
+                    <ColoredHeading gradient>Olá, </ColoredHeading>
+                    <ColoredHeading> nós somos a </ColoredHeading>
+                    <ColoredHeading gradient>CÉLERE</ColoredHeading>
                 </HeadingContainer>
 
-                <ParagraphContainer>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    nisl tincidunt eget. Lectus mauris eros in vitae .
+                <ParagraphContainer>Criamos software de ponta para impulsionar seu crescimento.
+                    Com tecnologia avançada e especialistas em programação,
+                    oferecemos soluções personalizadas para seu negócio.
+                    Transforme sua experiência digital.
                 </ParagraphContainer>
 
-                <Container width="20rem">
-                    <NavButton background href='#'>Build Your World</NavButton>&nbsp;&nbsp;&nbsp;
+                <Container align="center" width="20rem">
+                    <NavButton background href='#'>Conheça já</NavButton>&nbsp;&nbsp;
                     <a href='#'>
                         <StyledIcon color="secondary" icon="charm:arrow-right" />
                     </a>
@@ -39,21 +44,35 @@ export default function LandingPage() {
 
         {/* segundo "bloco" */}
         <Container>
-            <Container width="50%">
-                <Container width="60%" direction="column">
-                    <Heading>INTRODUCTION</Heading>
-                    <Container width="100%"><Heading fontWeight="200">TO HYDRA VR</Heading> <a href='#'>
-                        <StyledIcon color="tertiary" icon="charm:arrow-right" />
-                    </a></Container>
+            <Container width="70vw">
+                <Container width="90%" direction="column">
+                    <Heading>NÓS CUIDAMOS</Heading>
+                    <Container height="8vh" direction="column" width="120%">
+                        <Heading fontWeight="300">DA COMPLEXIDADE</Heading>
+                        <a href='#'>
+                            <img src={ArrowLargeRight} />
+                        </a>
+                    </Container>
                 </Container >
             </Container>
 
-            <ParagraphContainer width="40.625rem">
-                Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
-                nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
-                quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
-                lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
-            </ParagraphContainer>
+            <Container height="80%" direction="column">
+                <img width={"360px"} src={ComplexityIcon} />
+                <ParagraphContainer width="38.625rem">
+                    Não se preocupe com servidores, hospedagem,
+                    segurança, programação e outras coisas mais.
+                    Cuidamos de tudo para que você possa se
+                    concentrar no que faz de melhor!
+                </ParagraphContainer>
+            </Container>
+        </Container>
+
+        <Container>
+            <Container width="50%">
+                <RectangleContainerLarge>
+                    <RectanglePicture src={WebirdImageLarge} />
+                </RectangleContainerLarge>
+            </Container>
         </Container>
 
     </MainContainer>

@@ -9,10 +9,15 @@ const RectangleContainer = styled.div`
     overflow: hidden;
 `
 
+const RectangleContainerLarge = styled(RectangleContainer)`
+    height: 34.812rem;
+    border-radius: 6rem 16rem 6rem 16rem;
+`;
+
 const RectanglePicture = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
 `
 
-export { RectangleContainer, RectanglePicture }
+export { RectangleContainer, RectangleContainerLarge, RectanglePicture }

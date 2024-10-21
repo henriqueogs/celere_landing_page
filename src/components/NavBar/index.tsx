@@ -7,17 +7,17 @@ export default function NavBar() {
 
         {/* MENU da navbar */}
         <NavMenu width="31rem">
-            <NavLink href='#'>ABOUT</NavLink>
-            <NavLink href='#'>SERVICES</NavLink>
-            <NavLink href='#'>TECHNOLOGIES</NavLink>
-            <NavLink href='#'>HOW TO</NavLink>
+            <NavLink href='#'>SOBRE</NavLink>
+            <NavLink href='#'>SERVIÇOS</NavLink>
+            <NavLink href='#'>TECNOLOGIAS</NavLink>
+            <NavLink href='#'>PORTFOLIO</NavLink>
         </NavMenu>
 
         {/* BUTTONS da navbar */}
 
         <NavMenu width="21rem">
-            <NavButton border href='#'>Contact us</NavButton>
-            <NavButton background href='#'>Join Hydra</NavButton>
+            <NavButton border href='#'>Fale conosco</NavButton>
+            <NavButton background href='#'>Login</NavButton>
         </NavMenu>
     </NavContainer>
 }

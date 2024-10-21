@@ -31,11 +31,16 @@ const NavMenu = styled.div<NavMenuProps>`
 const NavLink = styled.a`
     color: ${({ theme }) => theme.colors.text};
     text-shadow: 0.125rem 0.125rem 0.250rem rgba(0, 0, 0, 0.7); /* sombra em "rgba" pela opacidade */
+    transition: 0.3s opacity;
+
+    &:hover {
+        opacity: 0.6;
+    }
 `;
 
 const NavButton = styled.a<NavButtonProps>`
     display: inline;
-    padding: ${({ border }) => border ?  '1rem 1.45rem' : '1.2rem 1.65rem'};
+    padding: ${({ border }) => border ? '1rem 1.45rem' : '1.2rem 1.65rem'};
     border-radius: 5rem;
     background: ${({ background, theme }) =>
         background
@@ -43,7 +48,14 @@ const NavButton = styled.a<NavButtonProps>`
             : 'transparent'
     };
     border: ${({ border }) => border ? "0.2rem solid #FFF" : ""};    
-    color: ${({ theme }) => theme.colors.text}
+    color: ${({ theme }) => theme.colors.text};
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+
+
+    &:hover {
+        background: white;
+        color: ${({ theme }) => theme.colors.primary};
+    }
 `
 
 export { NavContainer, MainLogo, NavMenu, NavLink, NavButton }

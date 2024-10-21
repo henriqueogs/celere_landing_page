@@ -10,7 +10,7 @@ const MainContainer = styled.div<MainContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 0;
 `;
 

@@ -9,4 +9,14 @@ export const theme: DefaultTheme = {
         text: '#FFFFFF',
         border: '#456684',
     },
+    images: {
+        medium: {
+            height: "26.625rem",
+            width: "30.625rem"
+        },
+        large: {
+            height: "",
+            width: ""
+        }
+    }
 }
