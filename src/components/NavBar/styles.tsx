@@ -15,6 +15,7 @@ const NavContainer = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    margin-left: 10%;
     margin-bottom: 12rem;
 `;
 

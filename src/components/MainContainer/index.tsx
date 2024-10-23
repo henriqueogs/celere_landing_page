@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface MainContainerProps {
-    height?: string; // Optional prop to define height
+  height?: string; // Optional prop to define height
 }
 
 const MainContainer = styled.div<MainContainerProps>`
@@ -10,8 +10,8 @@ const MainContainer = styled.div<MainContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   margin: 0;
+  padding-left: 6%;
 `;
 
 export default MainContainer;

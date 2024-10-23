@@ -7,7 +7,7 @@ interface HeadingProps {
 
 const Heading = styled.h1<HeadingProps>`
     display: inline;
-    margin: 0 0 1rem 0;
+    margin: 0;
     font-size: 2.5rem;
     font-weight: ${({ fontWeight }) => fontWeight ?? 'bold'};
     background: ${({ gradient, theme }) => gradient
