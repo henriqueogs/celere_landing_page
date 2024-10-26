@@ -1,6 +1,7 @@
 import ColoredHeading from "../../components/ColoredHeading"
 import MainContainer from "../../components/MainContainer"
 import NavBar from "../../components/NavBar"
+
 import WebirdImage from "../../assets/webird_1.jpg"
 import WebirdImageLarge from "../../assets/webird_2.jpg"
 import ComplexityIcon from "../../assets/complexity_icon.png"
@@ -13,6 +14,7 @@ import CardSocial from "../../assets/card_social.jpg";
 import ArrowLargeRight from "../../assets/arrow_large_right.svg"
 import { NavButton } from "../../components/NavBar/styles.tsx"
 import { Container, HeadingContainer, ParagraphContainer, StyledIcon } from "./styles.tsx"
+
 import PictureRectangle from "../../components/PictureRectangle/index.tsx"
 import { Heading } from "../../components/ColoredHeading/styles.tsx"
 import { RectangleContainerLarge, RectanglePicture } from "../../components/PictureRectangle/styles.tsx"
@@ -24,8 +26,8 @@ export default function LandingPage() {
         <NavBar />
         <MainContainer height="175rem">
             {/* Área inicial (primeiro "bloco") */}
-            <Container height="25rem">
-                <Container height="30rem" direction="column">
+            <Container align="center" height="25rem" width="55%" id="about">
+                <Container height="100%" direction="column">
                     <HeadingContainer>
                         <ColoredHeading gradient>Olá, </ColoredHeading>
                         <ColoredHeading> nós somos a </ColoredHeading>
@@ -46,15 +48,15 @@ export default function LandingPage() {
                     </Container>
                 </Container>
 
-                <Container>
+                <Container height="100%" width="50vw" align="center">
                     <PictureRectangle src={WebirdImage} />
                 </Container>
             </Container>
 
             {/* segundo "bloco" */}
-            <Container>
-                <Container width="70vw">
-                    <Container height="10rem" width="90%" direction="column">
+            <Container direction="row" width="55%" height="15rem" align="center" id="services">
+                <Container height="100%" width="50vw" align="center">
+                    <Container height="6rem" width="100%" align="flex-start" direction="column">
                         <Heading>NÓS CUIDAMOS</Heading>
                         <Heading fontWeight="300">DA COMPLEXIDADE</Heading>
                         <a href='#'>
@@ -63,9 +65,9 @@ export default function LandingPage() {
                     </Container >
                 </Container>
 
-                <Container height="80%" direction="column">
+                <Container height="100%" width="40vw" direction="column" align="flex-start">
                     <img width={"360px"} src={ComplexityIcon} />
-                    <ParagraphContainer width="38.625rem">
+                    <ParagraphContainer width="30.625rem">
                         Não se preocupe com servidores, hospedagem,
                         segurança, programação e outras coisas mais.
                         Cuidamos de tudo para que você possa se
@@ -75,8 +77,8 @@ export default function LandingPage() {
             </Container>
 
             {/* terceiro "bloco" */}
-            <Container height="50vh">
-                <Container width="50%">
+            <Container align="center" height="45rem" id="technologies">
+                <Container align="center" width="50%">
                     <RectangleContainerLarge>
                         <RectanglePicture src={WebirdImageLarge} />
                     </RectangleContainerLarge>
@@ -99,13 +101,13 @@ export default function LandingPage() {
                         n tempor.
                     </ParagraphContainer>
 
-                    <NavButton background href='#'>VAMOS ENTRAR EM CONTATO</NavButton>
+                    <NavButton background href='#'>ENTRE EM CONTATO</NavButton>
                 </Container >
             </Container>
 
-            <Container>
-                <Container width="70vw">
-                    <Container height="10rem" width="90%" direction="column">
+            <Container align="center">
+                <Container height="100%" align="center" width="70vw">
+                    <Container align="flex-start" height="10rem" width="90%" direction="column">
                         <Heading>WHY BUILD</Heading>
                         <Heading fontWeight="300">WITH HYDRA?</Heading>
                         <a href='#'>
@@ -114,7 +116,7 @@ export default function LandingPage() {
                     </Container >
                 </Container>
 
-                <Container height="80%" direction="column">
+                <Container height="100%" direction="column">
                     <ParagraphContainer width="38.625rem">
                         Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
@@ -125,15 +127,15 @@ export default function LandingPage() {
             </Container>
 
             {/* bloco de cards */}
-            <Container direction="row">
+            <Container direction="row" width="75vw" id="portfolio">
                 <GradientCard imgSrc={CardVR} title="TECHNOLOGY" text="Vitae sapien pellentesque habitant morbi
-                                                                   nunc. Viverra aliquet  porttitor rhoncus" />
+                                                                   nunc." />
                 <GradientCard imgSrc={CardEducation} title="EDUCATION" text="Vitae sapien pellentesque habitant morbi
-                                                                   nunc. Viverra aliquet  porttitor rhoncus" />
+                                                                   nunc." />
                 <GradientCard imgSrc={CardTravel} title="TRAVEL" text="Vitae sapien pellentesque habitant morbi
-                                                                   nunc. Viverra aliquet  porttitor rhoncus" />
+                                                                   nunc." />
                 <GradientCard imgSrc={CardSocial} title="SOCIAL" text="Vitae sapien pellentesque habitant morbi
-                                                                   nunc. Viverra aliquet  porttitor rhoncus" />
+                                                                   nunc." />
             </Container>
         </MainContainer>
     </>

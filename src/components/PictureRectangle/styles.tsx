@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const RectangleContainer = styled.div`
-    margin-top: -4rem;
-    width: 30.625rem;
-    height: 26.625rem;
+    width: 25rem;
+    height: 21.73rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
     border-radius: 6rem 6rem 6rem 16rem;
     overflow: hidden;

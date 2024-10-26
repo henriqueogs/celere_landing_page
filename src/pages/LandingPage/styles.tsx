@@ -24,10 +24,10 @@ const Container = styled.div<ContainerProps>`
     align-items: ${({ align }) => align ?? ''};
     height: ${({ height }) => height ?? '15rem'};
     width: ${({ width }) => width ?? '70vw'};
-    margin-bottom: 8rem;
 `
 
 const HeadingContainer = styled.div`
+    text-align: left;
     width: 28rem;
 `
 
@@ -36,6 +36,7 @@ const ParagraphContainer = styled.div<ParagraphContainerProps>`
     font-weight: normal;
     font-size: 0.9rem;
     line-height: 1.5rem;
+    text-align: left;
 `
 
 const StyledIcon = styled(Icon) <StyledIconProps>`

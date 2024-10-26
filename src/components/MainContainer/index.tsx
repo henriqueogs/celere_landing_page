@@ -11,7 +11,6 @@ const MainContainer = styled.div<MainContainerProps>`
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding-left: 6%;
 `;
 
 export default MainContainer;

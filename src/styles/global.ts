@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.colors.text}
     }
 
+    h2 {
+        margin: 0;
+    }
+
     a {
         text-decoration: none;
     }

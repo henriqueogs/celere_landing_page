@@ -7,10 +7,10 @@ export default function NavBar() {
 
         {/* MENU da navbar */}
         <NavMenu width="31rem">
-            <NavLink href='#'>SOBRE</NavLink>
-            <NavLink href='#'>SERVIÇOS</NavLink>
-            <NavLink href='#'>TECNOLOGIAS</NavLink>
-            <NavLink href='#'>PORTFOLIO</NavLink>
+            <NavLink href='#about'>SOBRE</NavLink>
+            <NavLink href='#services'>SERVIÇOS</NavLink>
+            <NavLink href='#technologies'>TECNOLOGIAS</NavLink>
+            <NavLink href='#portfolio'>PORTFOLIO</NavLink>
         </NavMenu>
 
         {/* BUTTONS da navbar */}

@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 19.375rem;
-    height: 31.937rem;
+    width: 17rem;
+    height: 28.02rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+
+    padding: 1rem 0;
 
     border-radius: 2rem; /* round corners */
     background: radial-gradient(circle, #235983 0%, #003250 100%);
@@ -15,8 +17,8 @@ export const CardContainer = styled.div`
 `
 
 export const CardImageContainer = styled.div`
-    width: 11.932rem;
-    height: 11.932rem;
+    width: 9rem;
+    height: 9rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
     border-radius: 50%;
     overflow: hidden;
@@ -31,6 +33,5 @@ export const HorizontalLine = styled.div`
     height: 0.048rem;
     opacity: 0.5;
     width: 9.625rem;
-    margin-bottom: 0.75rem;
     background-color: ${({ theme }) => theme.colors.line};
 `
