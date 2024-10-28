@@ -20,7 +20,7 @@ interface StyledIconProps {
 const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: ${({ direction }) => direction};
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: ${({ align }) => align ?? ''};
     height: ${({ height }) => height ?? '15rem'};
     width: ${({ width }) => width ?? '70vw'};

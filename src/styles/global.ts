@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-
         color: ${({ theme }) => theme.colors.text}
     }
 

@@ -21,13 +21,11 @@ import { RectangleContainerLarge, RectanglePicture } from "../../components/Pict
 import GradientCard from "../../components/GradientCard/index.tsx"
 
 export default function LandingPage() {
-
     return <>
         <NavBar />
-        <MainContainer height="175rem">
-            {/* Área inicial (primeiro "bloco") */}
-            <Container align="center" height="25rem" width="55%" id="about">
-                <Container height="100%" direction="column">
+        <MainContainer height="150rem">
+            <Container align="center" height="35rem" width="55%" id="about">
+                <Container height="60%" direction="column">
                     <HeadingContainer>
                         <ColoredHeading gradient>Olá, </ColoredHeading>
                         <ColoredHeading> nós somos a </ColoredHeading>
@@ -40,15 +38,15 @@ export default function LandingPage() {
                         Transforme sua experiência digital.
                     </ParagraphContainer>
 
-                    <Container align="center" width="20rem">
-                        <NavButton background href='#'>Conheça já</NavButton>&nbsp;&nbsp;
+                    <Container height="auto" align="center" width="20rem">
+                        <NavButton background href='#'>Conheça já</NavButton>&nbsp;
                         <a href='#'>
                             <StyledIcon color="secondary" icon="charm:arrow-right" />
                         </a>
                     </Container>
                 </Container>
 
-                <Container height="100%" width="50vw" align="center">
+                <Container height="60%" width="50vw" align="center">
                     <PictureRectangle src={WebirdImage} />
                 </Container>
             </Container>
@@ -56,7 +54,7 @@ export default function LandingPage() {
             {/* segundo "bloco" */}
             <Container direction="row" width="55%" height="15rem" align="center" id="services">
                 <Container height="100%" width="50vw" align="center">
-                    <Container height="6rem" width="100%" align="flex-start" direction="column">
+                    <Container height="80%" width="100%" align="flex-start" direction="column">
                         <Heading>NÓS CUIDAMOS</Heading>
                         <Heading fontWeight="300">DA COMPLEXIDADE</Heading>
                         <a href='#'>
@@ -77,7 +75,7 @@ export default function LandingPage() {
             </Container>
 
             {/* terceiro "bloco" */}
-            <Container align="center" height="45rem" id="technologies">
+            <Container align="center" width="80%" height="40rem" id="technologies">
                 <Container align="center" width="50%">
                     <RectangleContainerLarge>
                         <RectanglePicture src={WebirdImageLarge} />
@@ -86,9 +84,13 @@ export default function LandingPage() {
 
                 <Container
                     // style={{ backgroundColor: "red" }} 
-                    width="50%" height="30rem" direction="column" align="flex-start" >
-                    <Heading>ABOUT</Heading>
-                    <Heading fontWeight="300">HYDRA VR</Heading>
+                    width="50%" height="80%" direction="column" align="flex-start" >
+
+                    <Container height="5%" direction="column" align="flex-start">
+                        <Heading>ABOUT</Heading>
+                        <Heading fontWeight="300">HYDRA VR</Heading>
+                    </Container>
+
                     <ParagraphContainer width="38.625rem">
                         Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
                         urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
@@ -127,7 +129,7 @@ export default function LandingPage() {
             </Container>
 
             {/* bloco de cards */}
-            <Container direction="row" width="75vw" id="portfolio">
+            <Container direction="row" height="" width="75vw" id="portfolio">
                 <GradientCard imgSrc={CardVR} title="TECHNOLOGY" text="Vitae sapien pellentesque habitant morbi
                                                                    nunc." />
                 <GradientCard imgSrc={CardEducation} title="EDUCATION" text="Vitae sapien pellentesque habitant morbi

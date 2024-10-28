@@ -16,8 +16,7 @@ const NavContainer = styled.nav`
     align-items: center;
     width: 80%;
     min-width: 80rem;
-    /* margin-left: 10%; */
-    margin-bottom: 12rem;
+    margin-bottom: 2rem;
 `;
 
 const MainLogo = styled.img`
