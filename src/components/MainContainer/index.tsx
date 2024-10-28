@@ -12,6 +12,7 @@ const MainContainer = styled.div<MainContainerProps>`
   align-items: center;
   justify-content: space-around;
   margin: 0;
+  width: 110%;
 `;
 
 export default MainContainer;

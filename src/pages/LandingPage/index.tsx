@@ -24,7 +24,7 @@ export default function LandingPage() {
     return <>
         <NavBar />
         <MainContainer height="150rem">
-            <Container align="center" height="35rem" width="55%" id="about">
+            <Container align="center" height="35rem" width="65%" id="about">
                 <Container height="60%" direction="column">
                     <HeadingContainer>
                         <ColoredHeading gradient>Olá, </ColoredHeading>
@@ -52,7 +52,7 @@ export default function LandingPage() {
             </Container>
 
             {/* segundo "bloco" */}
-            <Container direction="row" width="55%" height="15rem" align="center" id="services">
+            <Container direction="row" width="65%" height="15rem" align="center" id="services">
                 <Container height="100%" width="50vw" align="center">
                     <Container height="80%" width="100%" align="flex-start" direction="column">
                         <Heading>NÓS CUIDAMOS</Heading>
@@ -75,7 +75,7 @@ export default function LandingPage() {
             </Container>
 
             {/* terceiro "bloco" */}
-            <Container align="center" width="80%" height="40rem" id="technologies">
+            <Container align="center" width="65%" height="40rem" id="technologies">
                 <Container align="center" width="50%">
                     <RectangleContainerLarge>
                         <RectanglePicture src={WebirdImageLarge} />
@@ -86,12 +86,12 @@ export default function LandingPage() {
                     // style={{ backgroundColor: "red" }} 
                     width="50%" height="80%" direction="column" align="flex-start" >
 
-                    <Container height="5%" direction="column" align="flex-start">
+                    <Container height="5%" width="auto" direction="column" align="flex-start">
                         <Heading>ABOUT</Heading>
                         <Heading fontWeight="300">HYDRA VR</Heading>
                     </Container>
 
-                    <ParagraphContainer width="38.625rem">
+                    <ParagraphContainer width="100%">
                         Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
                         urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
                         dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
@@ -119,7 +119,7 @@ export default function LandingPage() {
                 </Container>
 
                 <Container height="100%" direction="column">
-                    <ParagraphContainer width="38.625rem">
+                    <ParagraphContainer width="100%">
                         Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare

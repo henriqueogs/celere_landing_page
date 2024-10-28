@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const RectangleContainer = styled.div`
+    margin-left: -10%;
     width: 25rem;
     height: 21.73rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
