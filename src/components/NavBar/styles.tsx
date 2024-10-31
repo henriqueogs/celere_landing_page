@@ -6,14 +6,6 @@ interface NavButtonProps {
     background?: boolean;
 }
 
-// const NavContainer = styled.div`
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-// `;
-
 const NavLink = styled.a`
     color: ${({ theme }) => theme.colors.text};
     text-shadow: 0.125rem 0.125rem 0.250rem rgba(0, 0, 0, 0.7);
