@@ -5,11 +5,6 @@ import WebirdImage from "../../assets/webird_1.jpg"
 import WebirdImageLarge from "../../assets/webird_2.jpg"
 import ComplexityIcon from "../../assets/complexity_icon.png"
 
-import CardVR from "../../assets/card_VR.jpg";
-import CardEducation from "../../assets/card_education.jpg";
-import CardTravel from "../../assets/card_travel.jpg";
-import CardSocial from "../../assets/card_social.jpg";
-
 import ArrowLargeRight from "../../assets/arrow_large_right.svg"
 import { NavButton } from "../../components/NavBar/styles.tsx"
 import { Container, HeadingContainer, ParagraphContainer, StyledIcon } from "./styles.tsx"
@@ -20,7 +15,7 @@ import PictureRectangle from "../../components/PictureRectangle/index.tsx"
 import { Heading } from "../../components/ColoredHeading/styles.tsx"
 import { RectangleContainerLarge, RectanglePicture } from "../../components/PictureRectangle/styles.tsx"
 
-import GradientCard from "../../components/GradientCard/index.tsx"
+import ResponsiveCards from "../../components/ResponsiveCards/index.tsx"
 
 export default function LandingPage() {
     return <>
@@ -29,7 +24,7 @@ export default function LandingPage() {
             className="h-100 d-flex flex-column justify-content-between mt-5"
         >
             <Row id="about" className="align-items-center justify-content-center">
-                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column align-items-start justify-content-between mb-2">
+                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column align-items-start justify-content-between gap-4 mb-2">
                     <HeadingContainer>
                         <ColoredHeading gradient>Olá, </ColoredHeading>
                         <ColoredHeading> nós somos a </ColoredHeading>
@@ -51,13 +46,13 @@ export default function LandingPage() {
                     </Container>
                 </Col>
 
-                <Col xs={12} md={4} sm={2} className="d-flex justify-content-center" >
+                <Col xs={12} md={4} sm={2} className="d-flex justify-content-center my-3" >
                     <PictureRectangle src={WebirdImage} />
                 </Col>
             </Row>
 
             <Row id="services" className="align-items-center justify-content-center mt-5">
-                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column align-items-start justify-content-between">
+                <Col xs={12} md={4} sm={2} className="h-100 gap-2 d-flex flex-column align-items-start justify-content-between">
                     <Heading>NÓS CUIDAMOS</Heading>
                     <Heading fontWeight="300">DA COMPLEXIDADE</Heading>
                     <a href='#'>
@@ -78,14 +73,14 @@ export default function LandingPage() {
 
             <Row id="technologies"
                 className="d-flex align-items-center justify-content-center mt-5">
-                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column justify-content-center align-items-center">
+                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column justify-content-start align-items-center">
                     <RectangleContainerLarge>
                         <RectanglePicture src={WebirdImageLarge} />
                     </RectangleContainerLarge>
                 </Col>
 
                 <Col
-                    xs={12} md={4} sm={2} className="h-100 d-flex flex-column justify-content-around align-items-start mb-2">
+                    xs={12} md={4} sm={2} className="h-100 gap-4 d-flex flex-column justify-content-around align-items-start mb-2">
                     <Col className="d-inline-flex flex-grow-0 flex-column align-items-start justify-content-center">
                         <Heading>ABOUT</Heading>
                         <Heading fontWeight="300">HYDRA VR</Heading>
@@ -111,7 +106,8 @@ export default function LandingPage() {
                         <img src={ArrowLargeRight} />
                     </a>
                 </Col >
-                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column align-items-start">
+
+                <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column">
                     <ParagraphContainer width="100%">
                         Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
@@ -119,6 +115,10 @@ export default function LandingPage() {
                         lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
                     </ParagraphContainer>
                 </Col>
+            </Row>
+
+            <Row style={{ alignSelf: "center", width: "100%", height: "60vh" }} className="d-flex align-items-center justify-content-center mt-5">
+                <ResponsiveCards />
             </Row>
         </BootstrapContainer>
     </>

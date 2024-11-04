@@ -65,7 +65,7 @@ const CollapsedContainer = styled.div`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 30%;
+    width: 45%;
     background-color: ${({ theme }) => theme.colors.primary};
     display: flex;
     flex-direction: column;

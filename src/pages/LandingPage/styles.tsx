@@ -28,7 +28,6 @@ const Container = styled.div<ContainerProps>`
 
 const HeadingContainer = styled.div`
     text-align: left;
-    width: 28rem;
 `
 
 const ParagraphContainer = styled.div<ParagraphContainerProps>`

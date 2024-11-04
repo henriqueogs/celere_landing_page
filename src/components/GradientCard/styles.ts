@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 17rem;
+    width: 14rem;
     height: 28.02rem;
 
     display: flex;
@@ -14,6 +14,10 @@ export const CardContainer = styled.div`
     border-radius: 2rem; /* round corners */
     background: radial-gradient(circle, #235983 0%, #003250 100%);
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* optional: adds shadow for depth */
+
+    h2 {
+        font-size: 1.5rem
+    }
 `
 
 export const CardImageContainer = styled.div`
@@ -30,7 +34,7 @@ export const CardImage = styled.img`
 `
 
 export const HorizontalLine = styled.div`
-    height: 0.048rem;
+    height: 0.1rem;
     opacity: 0.5;
     width: 9.625rem;
     background-color: ${({ theme }) => theme.colors.line};
