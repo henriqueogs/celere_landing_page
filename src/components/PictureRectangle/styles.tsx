@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 const RectangleContainer = styled.div`
-    margin-top: -4rem;
-    width: 30.625rem;
-    height: 26.625rem;
+    width: 20rem;
+    height: 17.38rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
     border-radius: 6rem 6rem 6rem 16rem;
     overflow: hidden;
 `
+
+const RectangleContainerLarge = styled(RectangleContainer)`
+    height: 27.85rem;
+    border-radius: 6rem 16rem 6rem 16rem;
+`;
 
 const RectanglePicture = styled.img`
     width: 100%;
@@ -15,4 +19,4 @@ const RectanglePicture = styled.img`
     object-fit: cover;
 `
 
-export { RectangleContainer, RectanglePicture }
+export { RectangleContainer, RectangleContainerLarge, RectanglePicture }

@@ -8,5 +8,16 @@ export const theme: DefaultTheme = {
         background: '#4F7598',
         text: '#FFFFFF',
         border: '#456684',
+        line: '#C0B7E8',
     },
+    images: {
+        medium: {
+            height: "26.625rem",
+            width: "30.625rem"
+        },
+        large: {
+            height: "",
+            width: ""
+        }
+    }
 }

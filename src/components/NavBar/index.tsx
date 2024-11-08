@@ -1,23 +1,61 @@
-import { NavButton, NavContainer, NavLink, NavMenu } from "./styles";
+import { useEffect, useState } from "react";
 
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+
+import { NavBarCollapse, NavButton, NavLink, NavMenu } from "./styles";
+import StyledToggle from "./StyledToggle";
+import CollapsedNavMenu from "./CollapsedNavMenu";
 export default function NavBar() {
-    return <NavContainer>
+    const [isMobile, setIsMobile] = useState(false);
+    const [isCollapsedOpen, setIsCollapsedOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 992);
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial check
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        console.log("isCollapsedOpen: ", isCollapsedOpen)
+    }, [isCollapsedOpen])
+
+    return <Navbar expand="lg" style={{ width: "100%" }}>
         {/* LOGO Celere */}
-        <img src="src\assets\celere_logo.svg" alt="Logo" />
+        <Container style={{ width: "100%" }} fluid>
+            <Navbar.Brand href="/">
+                <img src="src\assets\celere_logo.svg" alt="Logo" />
+            </Navbar.Brand>
+            {isMobile ? (<>
+                <StyledToggle
+                    aria-controls="responsive-navbar-nav"
+                    onClick={() => setIsCollapsedOpen(!isCollapsedOpen)}
+                />
+                {isCollapsedOpen && (
+                    <CollapsedNavMenu onClose={() => setIsCollapsedOpen(false)} />
+                )}
+            </>
+            ) : (
+                <NavBarCollapse>
+                    <NavMenu>
+                        <NavLink href="#about">SOBRE</NavLink>
+                        <NavLink href="#services">SERVIÇOS</NavLink>
+                        <NavLink href="#technologies">TECNOLOGIAS</NavLink>
+                        <NavLink href="#portfolio">PORTFOLIO</NavLink>
+                    </NavMenu>
 
-        {/* MENU da navbar */}
-        <NavMenu width="31rem">
-            <NavLink href='#'>ABOUT</NavLink>
-            <NavLink href='#'>SERVICES</NavLink>
-            <NavLink href='#'>TECHNOLOGIES</NavLink>
-            <NavLink href='#'>HOW TO</NavLink>
-        </NavMenu>
+                    <NavMenu>
+                        <NavButton border href="#">
+                            Fale conosco
+                        </NavButton>
+                        <NavButton background href="#">
+                            Login
+                        </NavButton>
+                    </NavMenu>
+                </NavBarCollapse >)
+            }
 
-        {/* BUTTONS da navbar */}
-
-        <NavMenu width="21rem">
-            <NavButton border href='#'>Contact us</NavButton>
-            <NavButton background href='#'>Join Hydra</NavButton>
-        </NavMenu>
-    </NavContainer>
+        </Container >
+    </Navbar >
 }
