@@ -10,7 +10,7 @@ const CollapsedNavMenu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <NavLink href='#about'>SOBRE</NavLink>
             <NavLink href='#services'>SERVIÇOS</NavLink>
             <NavLink href='#technologies'>TECNOLOGIAS</NavLink>
-            <NavLink href='#portfolio'>PORTFOLIO</NavLink>
+            <NavLink href='#team'>A EQUIPE</NavLink>
             <NavLink href='#'>Fale conosco</NavLink>
             <NavLink href='#'>Login</NavLink>
         </nav>

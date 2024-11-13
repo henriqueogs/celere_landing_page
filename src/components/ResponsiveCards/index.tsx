@@ -3,10 +3,9 @@ import { Container as BootstrapContainer, Carousel } from "react-bootstrap";
 
 import GradientCard from "../GradientCard"; // Assuming you have a GradientCard component
 
-import CardVR from "../../assets/card_VR.jpg"
-import CardEducation from "../../assets/card_education.jpg"
-import CardTravel from "../../assets/card_travel.jpg"
-import CardSocial from "../../assets/card_social.jpg"
+import Alessandro from "../../assets/alessandro.jpg";
+import Henrique from "../../assets/henrique.jpg";
+import Nilmer from "../../assets/nilmer.jpg";
 
 function ResponsiveCards() {
     const [isMobile, setIsMobile] = useState(false);
@@ -22,16 +21,15 @@ function ResponsiveCards() {
     }, []);
 
     const cards = [
-        { imgSrc: CardVR, title: "TECHNOLOGY", text: "Vitae sapien pellentesque habitant morbi nunc." },
-        { imgSrc: CardEducation, title: "EDUCATION", text: "Vitae sapien pellentesque habitant morbi nunc." },
-        { imgSrc: CardTravel, title: "TRAVEL", text: "Vitae sapien pellentesque habitant morbi nunc." },
-        { imgSrc: CardSocial, title: "SOCIAL", text: "Vitae sapien pellentesque habitant morbi nunc." }
+        { imgSrc: Alessandro, title: "ALESSANDRO", text: "Arquiteto de Soluções, Engenheiro de Software, Dev Sênior.", link: "https://www.linkedin.com/in/alessandroferreira-dev/" },
+        { imgSrc: Henrique, title: "HENRIQUE", text: "Desenvolvedor Front-end Sênior, Engenheiro de Software", link: "https://www.linkedin.com/in/henriqueogs/" },
+        { imgSrc: Nilmer, title: "GIOVANE", text: "Desenvolvedor Front-end Web e Mobile | programei essa página! :D", link: "https://www.linkedin.com/in/nilmer/" },
     ];
 
     return (
         <BootstrapContainer
             className="d-flex text-center align-items-center justify-content-center"
-            id="portfolio"
+            id="team"
             style={{ height: "100%", width: "100%" }}
         >
             {isMobile ? (
@@ -45,7 +43,7 @@ function ResponsiveCards() {
                     ))}
                 </Carousel>
             ) : (
-                <BootstrapContainer className="w-75 d-flex flex-row justify-content-around">
+                <BootstrapContainer className="w-75 d-flex flex-row justify-content-center">
                     {cards.map((card, index) => (
                         <GradientCard key={index} imgSrc={card.imgSrc} title={card.title} text={card.text} />
                     ))}

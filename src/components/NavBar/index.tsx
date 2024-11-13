@@ -42,7 +42,7 @@ export default function NavBar() {
                         <NavLink href="#about">SOBRE</NavLink>
                         <NavLink href="#services">SERVIÇOS</NavLink>
                         <NavLink href="#technologies">TECNOLOGIAS</NavLink>
-                        <NavLink href="#portfolio">PORTFOLIO</NavLink>
+                        <NavLink href="#team">A EQUIPE</NavLink>
                     </NavMenu>
 
                     <NavMenu>
