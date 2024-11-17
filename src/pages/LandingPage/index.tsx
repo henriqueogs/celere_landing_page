@@ -15,7 +15,6 @@ import { Container as BootstrapContainer, Row, Col } from "react-bootstrap";
 
 import PictureRectangle from "../../components/PictureRectangle/index.tsx"
 import { Heading } from "../../components/ColoredHeading/styles.tsx"
-import { RectangleContainerLarge, RectanglePicture } from "../../components/PictureRectangle/styles.tsx"
 
 import ResponsiveCards from "../../components/ResponsiveCards/index.tsx"
 
@@ -73,9 +72,7 @@ export default function LandingPage() {
             <Row id="technologies"
                 className="d-flex align-items-center justify-content-center mt-5">
                 <Col xs={12} md={4} sm={2} className="h-100 d-flex flex-column justify-content-start align-items-center">
-                    <RectangleContainerLarge>
-                        <RectanglePicture src={WebirdImageLarge} />
-                    </RectangleContainerLarge>
+                    <PictureRectangle src={WebirdImageLarge} />
                 </Col>
 
                 <Col
