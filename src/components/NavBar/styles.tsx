@@ -1,10 +1,19 @@
 import { Nav, Navbar } from "react-bootstrap";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface NavButtonProps {
     border?: boolean;
     background?: boolean;
 }
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 const NavLink = styled.a`
     color: ${({ theme }) => theme.colors.text};
@@ -42,22 +51,23 @@ const NavBarCollapse = styled(Navbar.Collapse)`
 `
 
 const NavButton = styled.a<NavButtonProps>`
-padding: ${({ border }) => (border ? '1rem 1.45rem' : '1.2rem 1.65rem')};
-border-radius: 5rem;
-background: ${({ background, theme }) =>
+  padding: ${({ border }) => (border ? "1rem 1.45rem" : "1.2rem 1.65rem")};
+  border-radius: 5rem;
+  background: ${({ background, theme }) =>
         background
             ? `linear-gradient(to right, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`
-            : 'transparent'
-    };
-border: ${({ border }) => (border ? "0.2rem solid #FFF" : "none")};
-color: ${({ theme }) => theme.colors.text};
-transition: background 0.2s ease -in -out, color 0.2s ease -in -out;
+            : "transparent"};
+  border: ${({ border }) => (border ? "0.2rem solid #FFF" : "none")};
+  color: ${({ theme }) => theme.colors.text};
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 
-    &:hover {
+  &:hover {
     background: white;
     color: ${({ theme }) => theme.colors.primary};
-}
+    animation: ${fadeIn} 0.08s ease-in-out both;
+  }
 `;
+
 
 // CollapsedNavMenu.tsx
 const CollapsedContainer = styled.div`
@@ -79,4 +89,71 @@ const CollapsedContainer = styled.div`
     }
 `;
 
-export { NavLink, NavBarCollapse, NavButton, NavMenu, CollapsedContainer };
+const CloseButton = styled.button`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.text};
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.colors.line};
+  }
+`;
+
+// Styles for the Nav container
+export const NavbarNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0 0.5rem; /* Add spacing between NavLink items */
+  width: 100%; /* Ensure it spans the container width */
+`;
+
+// Styling for individual NavLinks
+export const NavbarNavLink = styled.a`
+  text-decoration: none;
+  font-size: 1rem; /* Slightly larger font for mobile readability */
+  color: ${({ theme }) => theme.colors.text};
+  padding: 0.5rem 0.1rem; /* Add padding for touch optimization */
+  border-radius: 0.5rem; /* Rounded edges for a smoother touch UI */
+  width: 100%; /* Span full width of the nav for easier tapping */
+  text-align: left;
+  background-color: ${({ theme }) => theme.colors.primary};
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.colors.tertiary};
+  }
+`;
+
+// Styling for the horizontal line
+export const Divider = styled.hr`
+  width: 100%; /* Span the width of the nav */
+  border: none;
+  height: 2px;
+  background-color: ${({ theme }) => theme.colors.line};
+  margin: 0.5rem 0; /* Add some spacing above and below the line */
+`;
+
+
+export { NavLink, NavBarCollapse, NavButton, NavMenu, CollapsedContainer, CloseButton };
