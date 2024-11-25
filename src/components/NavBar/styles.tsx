@@ -75,7 +75,7 @@ const CollapsedContainer = styled.div`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 45%;
+    width: 60%;
     background-color: ${({ theme }) => theme.colors.primary};
     display: flex;
     flex-direction: column;
@@ -130,7 +130,7 @@ export const NavbarNavLink = styled.a`
   text-decoration: none;
   font-size: 1rem; /* Slightly larger font for mobile readability */
   color: ${({ theme }) => theme.colors.text};
-  padding: 0.5rem 0.1rem; /* Add padding for touch optimization */
+  padding: 0.5rem 1rem; /* Add padding for touch optimization */
   border-radius: 0.5rem; /* Rounded edges for a smoother touch UI */
   width: 100%; /* Span full width of the nav for easier tapping */
   text-align: left;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { RectangleContainer, RectanglePicture } from "./styles";
 
 interface PictureRectangleProps {
@@ -14,7 +14,7 @@ export default function PictureRectangle({ src }: PictureRectangleProps) {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.1 } // Adjust threshold for when animation triggers
+            { threshold: 0.1 } // limite para animação
         );
 
         if (containerRef.current) {

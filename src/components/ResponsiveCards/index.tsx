@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container as BootstrapContainer, Carousel } from "react-bootstrap";
 
 import GradientCard from "../GradientCard"; // Assuming you have a GradientCard component
