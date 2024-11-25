@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
+import CelereLogo from "../../assets/celere_logo.svg"
+
 import { NavBarCollapse, NavButton, NavLink, NavMenu } from "./styles";
 import StyledToggle from "./StyledToggle";
 import CollapsedNavMenu from "./CollapsedNavMenu";
@@ -21,7 +23,7 @@ export default function NavBar() {
         {/* LOGO Celere */}
         <Container style={{ width: "100%" }} fluid>
             <Navbar.Brand href="/">
-                <img width="200px" src="src\assets\celere_logo.svg" alt="Logo" />
+                <img width="200px" src={CelereLogo} alt="Logo" />
             </Navbar.Brand>
             {isMobile ? (<>
                 <StyledToggle
