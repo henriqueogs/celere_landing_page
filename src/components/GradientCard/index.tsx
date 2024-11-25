@@ -6,9 +6,10 @@ interface GradientCardProps {
     title?: string;
     text?: string;
     imgSrc: string | undefined;
+    link?: string;
 }
 
-export default function GradientCard({ title, text, imgSrc }: GradientCardProps) {
+export default function GradientCard({ title, text, imgSrc, link }: GradientCardProps) {
     return <CardContainer>
         <CardImageContainer>
             <CardImage src={imgSrc} />
@@ -16,6 +17,6 @@ export default function GradientCard({ title, text, imgSrc }: GradientCardProps)
         <h2>{title}</h2>
         <HorizontalLine />
         <ParagraphContainer width="70%">{text}</ParagraphContainer>
-        <NavButton background href="#" >TRY IT NOW</NavButton>
+        <NavButton background href={link} >LinkedIn</NavButton>
     </CardContainer>
 }

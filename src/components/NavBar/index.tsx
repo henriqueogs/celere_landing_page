@@ -17,15 +17,11 @@ export default function NavBar() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-        console.log("isCollapsedOpen: ", isCollapsedOpen)
-    }, [isCollapsedOpen])
-
     return <Navbar expand="lg" style={{ width: "100%" }}>
         {/* LOGO Celere */}
         <Container style={{ width: "100%" }} fluid>
             <Navbar.Brand href="/">
-                <img src="src\assets\celere_logo.svg" alt="Logo" />
+                <img width="200px" src="src\assets\celere_logo.svg" alt="Logo" />
             </Navbar.Brand>
             {isMobile ? (<>
                 <StyledToggle
@@ -42,7 +38,7 @@ export default function NavBar() {
                         <NavLink href="#about">SOBRE</NavLink>
                         <NavLink href="#services">SERVIÇOS</NavLink>
                         <NavLink href="#technologies">TECNOLOGIAS</NavLink>
-                        <NavLink href="#portfolio">PORTFOLIO</NavLink>
+                        <NavLink href="#team">EQUIPE</NavLink>
                     </NavMenu>
 
                     <NavMenu>

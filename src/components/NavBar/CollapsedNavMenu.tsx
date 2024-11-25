@@ -1,20 +1,22 @@
-import React, { useEffect } from 'react';
-import { CollapsedContainer, NavLink } from './styles';
+import React from 'react';
+import { CloseButton } from './styles'; // Import the styled button
+import { CollapsedContainer, NavbarNav, NavbarNavLink, Divider } from './styles'; // Assuming these exist
 
 const CollapsedNavMenu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-    useEffect(() => { console.log("enter collapsedMenu") }, [])
-
-    return <CollapsedContainer>
-        <button onClick={onClose} style={{ alignSelf: 'flex-end' }}>X</button>
-        <nav>
-            <NavLink href='#about'>SOBRE</NavLink>
-            <NavLink href='#services'>SERVIÇOS</NavLink>
-            <NavLink href='#technologies'>TECNOLOGIAS</NavLink>
-            <NavLink href='#portfolio'>PORTFOLIO</NavLink>
-            <NavLink href='#'>Fale conosco</NavLink>
-            <NavLink href='#'>Login</NavLink>
-        </nav>
-    </CollapsedContainer>
+    return (
+        <CollapsedContainer>
+            <CloseButton onClick={onClose}>X</CloseButton>
+            <NavbarNav>
+                <NavbarNavLink href="#about">SOBRE</NavbarNavLink>
+                <NavbarNavLink href="#services">SERVIÇOS</NavbarNavLink>
+                <NavbarNavLink href="#technologies">TECNOLOGIAS</NavbarNavLink>
+                <NavbarNavLink href="#team">A EQUIPE</NavbarNavLink>
+                <Divider />
+                <NavbarNavLink href="#">Fale conosco</NavbarNavLink>
+                <NavbarNavLink href="#">Login</NavbarNavLink>
+            </NavbarNav>
+        </CollapsedContainer>
+    );
 };
 
 export default CollapsedNavMenu;
