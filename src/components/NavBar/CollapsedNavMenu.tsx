@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { CloseButton } from './styles'; // Import the styled button
 import { CollapsedContainer, NavbarNav, NavbarNavLink, Divider } from './styles'; // Assuming these exist
 
 const CollapsedNavMenu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-    useEffect(() => {
-        console.log('enter collapsedMenu');
-    }, []);
-
     return (
         <CollapsedContainer>
             <CloseButton onClick={onClose}>X</CloseButton>

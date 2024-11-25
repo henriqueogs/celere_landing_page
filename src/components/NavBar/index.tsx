@@ -17,10 +17,6 @@ export default function NavBar() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-        console.log("isCollapsedOpen: ", isCollapsedOpen)
-    }, [isCollapsedOpen])
-
     return <Navbar expand="lg" style={{ width: "100%" }}>
         {/* LOGO Celere */}
         <Container style={{ width: "100%" }} fluid>
