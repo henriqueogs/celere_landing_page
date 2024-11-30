@@ -29,7 +29,6 @@ function ResponsiveCards() {
     return (
         <BootstrapContainer
             className="d-flex text-center align-items-center justify-content-center"
-            id="team"
             style={{ height: "100%", width: "100%" }}
         >
             {isMobile ? (

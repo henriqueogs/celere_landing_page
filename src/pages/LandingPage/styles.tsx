@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Row as BootstrapRow } from "react-bootstrap";
 
 import { Icon } from "@iconify/react";
 
@@ -30,19 +31,30 @@ const HeadingContainer = styled.div`
     text-align: left;
 `
 
+const AreaRow = styled(BootstrapRow)`
+    @media (min-width: 1200px) {
+        height: 90vh;
+        width: 70vw;
+    }
+`
+
 const ParagraphContainer = styled.div<ParagraphContainerProps>`
     width: ${({ width }) => width ?? '25rem'};
     font-weight: normal;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 2rem;
     text-align: left;
+`
+
+const AnimatedIcon = styled.img`
+    width: 20rem;
 `
 
 const StyledIcon = styled(Icon) <StyledIconProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-size: 4rem;
 
-    transition: color 0.2s ease-in-out, margin-right 0.2s ease-in-out;
+    transition: color 0.8s ease-in-out, margin-right 0.2s ease-in-out;
 
     &:hover {
         color: ${({ theme }) => theme.colors.text};
@@ -50,4 +62,4 @@ const StyledIcon = styled(Icon) <StyledIconProps>`
     }
 `
 
-export { Container, HeadingContainer, ParagraphContainer, StyledIcon }
+export { Container, HeadingContainer, ParagraphContainer, StyledIcon, AreaRow, AnimatedIcon }
