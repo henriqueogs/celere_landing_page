@@ -21,9 +21,9 @@ function ResponsiveCards() {
     }, []);
 
     const cards = [
-        { imgSrc: Alessandro, title: "ALESSANDRO", text: "Arquiteto de Soluções, Engenheiro de Software, Dev Sênior.", link: "https://www.linkedin.com/in/alessandroferreira-dev/" },
-        { imgSrc: Henrique, title: "HENRIQUE", text: "Desenvolvedor Front-end Sênior, Engenheiro de Software", link: "https://www.linkedin.com/in/henriqueogs/" },
-        { imgSrc: Nilmer, title: "GIOVANE", text: "Desenvolvedor Front-end Web e Mobile | programei essa página! :D", link: "https://www.linkedin.com/in/nilmer/" },
+        { imgSrc: Alessandro, title: "ALESSANDRO FERREIRA", text: `Arquiteto de Soluções, Engenheiro de Software, Dev Sênior.`, link: "https://www.linkedin.com/in/alessandroferreira-dev/" },
+        { imgSrc: Henrique, title: "HENRIQUE GUIMARÃES", text: "Front-end Sênior, Engenheiro de Software", link: "https://www.linkedin.com/in/henriqueogs/" },
+        { imgSrc: Nilmer, title: "GIOVANE NILMER", text: "Front-end Web e Mobile", link: "https://www.linkedin.com/in/nilmer/" },
     ];
 
     return (

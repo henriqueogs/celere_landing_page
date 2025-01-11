@@ -16,7 +16,8 @@ export default function GradientCard({ title, text, imgSrc, link }: GradientCard
         </CardImageContainer>
         <h2>{title}</h2>
         <HorizontalLine />
-        <ParagraphContainer width="70%">{text}</ParagraphContainer>
+        
+        <ParagraphContainer width="83%">{text}</ParagraphContainer>
         <NavButton background href={link} >LinkedIn</NavButton>
     </CardContainer>
 }
