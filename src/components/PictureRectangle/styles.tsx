@@ -4,7 +4,6 @@ interface RectangleContainerProps {
     isVisible?: boolean;
 }
 
-// keyframes para fade-in e fade-out:
 const fadeInFwd = keyframes`
   0% {
     transform: translateZ(-80px);
@@ -27,9 +26,8 @@ const fadeOutFwd = keyframes`
   }
 `;
 
-
 const RectangleContainer = styled.div<RectangleContainerProps>`
-    max-width: 20rem;
+    max-width: 30rem;
     min-height: 17.38rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
     border-radius: 6rem 6rem 6rem 16rem;

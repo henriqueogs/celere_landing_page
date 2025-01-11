@@ -2,8 +2,8 @@ import { Nav, Navbar } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 
 interface NavButtonProps {
-    border?: boolean;
-    background?: boolean;
+  border?: boolean;
+  background?: boolean;
 }
 
 const fadeIn = keyframes`
@@ -51,15 +51,16 @@ const NavBarCollapse = styled(Navbar.Collapse)`
 `
 
 const NavButton = styled.a<NavButtonProps>`
+  cursor: pointer;
   padding: ${({ border }) => (border ? "1rem 1.45rem" : "1.2rem 1.65rem")};
   border-radius: 5rem;
   background: ${({ background, theme }) =>
-        background
-            ? `linear-gradient(to right, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`
-            : "transparent"};
+    background
+      ? `linear-gradient(to right, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`
+      : "transparent"};
   border: ${({ border }) => (border ? "0.2rem solid #FFF" : "none")};
   color: ${({ theme }) => theme.colors.text};
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
 
   &:hover {
     background: white;
@@ -116,26 +117,24 @@ const CloseButton = styled.button`
   }
 `;
 
-// Styles for the Nav container
 export const NavbarNav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0 0.5rem; /* Add spacing between NavLink items */
-  width: 100%; /* Ensure it spans the container width */
+  gap: 0 0.5rem; 
+  width: 100%; 
 `;
 
-// Styling for individual NavLinks
 export const NavbarNavLink = styled.a`
   text-decoration: none;
-  font-size: 1rem; /* Slightly larger font for mobile readability */
+  font-size: 1rem; 
   color: ${({ theme }) => theme.colors.text};
-  padding: 0.5rem 1rem; /* Add padding for touch optimization */
-  border-radius: 0.5rem; /* Rounded edges for a smoother touch UI */
-  width: 100%; /* Span full width of the nav for easier tapping */
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem; 
+  width: 100%;
   text-align: left;
   background-color: ${({ theme }) => theme.colors.primary};
-  transition: background-color 0.3s ease;
+  transition: background-color 0.8s ease;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};
@@ -146,13 +145,12 @@ export const NavbarNavLink = styled.a`
   }
 `;
 
-// Styling for the horizontal line
 export const Divider = styled.hr`
-  width: 100%; /* Span the width of the nav */
+  width: 100%;
   border: none;
   height: 2px;
   background-color: ${({ theme }) => theme.colors.line};
-  margin: 0.5rem 0; /* Add some spacing above and below the line */
+  margin: 0.5rem 0;
 `;
 
 
