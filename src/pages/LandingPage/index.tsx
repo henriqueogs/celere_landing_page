@@ -1,5 +1,6 @@
 import ColoredHeading from "../../components/ColoredHeading"
 import NavBar from "../../components/NavBar"
+import Footer from "../../components/Footer/index.tsx"
 
 import WebirdImage from "../../assets/webird_1.gif"
 import WebirdImageLarge from "../../assets/webird_2.gif"
@@ -9,7 +10,7 @@ import ComputerScreen from "../../assets/computer_screen.gif"
 import VideoMeeting from "../../assets/video_meeting.gif"
 
 import { NavButton } from "../../components/NavBar/styles.tsx"
-import { AnimatedIcon, AreaRow, Container, HeadingContainer, ParagraphContainer } from "./styles.tsx"
+import { AnimatedIcon, AnimatedRow, AreaRow, Container, HeadingContainer, ParagraphContainer } from "./styles.tsx"
 
 import { Container as BootstrapContainer, Row, Col } from "react-bootstrap";
 
@@ -38,11 +39,11 @@ export default function LandingPage() {
                 <Col xs={12} md={4} sm={6} className="h-100 w-sm-100 d-flex flex-column align-items-start justify-content-center gap-4 mb-2">
                     <HeadingContainer>
                         <ColoredHeading gradient>Olá, </ColoredHeading>
-                        <ColoredHeading> nós somos a </ColoredHeading>
+                        <ColoredHeading> somos a </ColoredHeading>
                         <ColoredHeading gradient>CÉLERE</ColoredHeading>
                     </HeadingContainer>
 
-                    <ParagraphContainer width="70%">
+                    <ParagraphContainer width="80%">
                         Criamos software de ponta para impulsionar seu crescimento.
                         Com tecnologia avançada e especialistas em programação,
                         oferecemos soluções personalizadas para seu negócio.
@@ -82,7 +83,7 @@ export default function LandingPage() {
                         ${servicesInView ?
                         "animate__animated animate__fadeInRight"
                         :
-                        "animate__animated animate__fadeOutRight"}`} >
+                        ""}`} >
 
                     <AnimatedIcon className={servicesInView ? "animate__animated animate__bounce" : ""} src={ComplexityIcon} />
 
@@ -95,11 +96,12 @@ export default function LandingPage() {
                 </Col>
             </AreaRow>
 
-            <AreaRow
+            <AnimatedRow
                 ref={technologiesRef}
                 id="technologies"
                 className={`d-flex align-items-center justify-content-around my-5 
                     ${technologiesInView ? "animate__animated animate__zoomIn" : ""}`}
+                inView={technologiesInView}
             >
                 <Col xs={12} md={4} sm={6} className="h-100 d-flex flex-column justify-content-center align-items-center">
                     <PictureRectangle src={WebirdImageLarge} />
@@ -125,7 +127,7 @@ export default function LandingPage() {
 
                     <NavButton background href='#'>ENTRE EM CONTATO</NavButton>
                 </Col >
-            </AreaRow>
+            </AnimatedRow>
 
             <Row id="team" className="d-flex align-items-center justify-content-center mt-5">
                 <Col xs={12} md={4} sm={12} className="h-100 d-flex flex-column justify-content-center align-items-start ms-5">
@@ -148,6 +150,8 @@ export default function LandingPage() {
             <Row style={{ alignSelf: "center", width: "100%", height: "70vh" }} className="d-flex align-items-center justify-content-center mt-5">
                 <ResponsiveCards />
             </Row>
+
+            <Footer />
         </BootstrapContainer>
     </>
 }

@@ -18,6 +18,10 @@ interface StyledIconProps {
     color: string;
 }
 
+interface AnimatedRowProps {
+    inView: boolean;
+}
+
 const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: ${({ direction }) => direction};
@@ -37,6 +41,12 @@ const AreaRow = styled(BootstrapRow)`
         width: 70vw;
     }
 `
+
+const AnimatedRow = styled(AreaRow) <AnimatedRowProps>`
+  opacity: ${(props) => (props.inView ? 1 : 0)};
+  transform: ${(props) => (props.inView ? "scale(1)" : "scale(0.9)")};
+  transition: opacity 0.5s ease, transform 0.5s ease;
+`;
 
 const ParagraphContainer = styled.div<ParagraphContainerProps>`
     width: ${({ width }) => width ?? '25rem'};
@@ -62,4 +72,4 @@ const StyledIcon = styled(Icon) <StyledIconProps>`
     }
 `
 
-export { Container, HeadingContainer, ParagraphContainer, StyledIcon, AreaRow, AnimatedIcon }
+export { Container, HeadingContainer, ParagraphContainer, StyledIcon, AreaRow, AnimatedRow, AnimatedIcon }
