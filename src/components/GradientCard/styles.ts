@@ -25,6 +25,7 @@ export const CardImageContainer = styled.div`
     width: 9rem;
     height: 9rem;
     border: ${({ theme }) => `1rem solid ${theme.colors.border}`};
+    margin: 1rem 0;
     border-radius: 50%;
     overflow: hidden;
 `
@@ -39,4 +40,5 @@ export const HorizontalLine = styled.div`
     opacity: 0.5;
     width: 9.625rem;
     background-color: ${({ theme }) => theme.colors.line};
+    margin: 1rem 0;
 `
